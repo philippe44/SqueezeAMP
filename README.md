@@ -11,7 +11,7 @@ It includes the following:
 - Jack 3.5mm for analogue line-out (with insertion detection) ==> <strong>this NOT supposed to be a headset output but it seems to drive enough for small 3 pins headphones at decent volume (need to check)</strong>
 - SDPIF optical output
 - Connector for 5 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, rotary encoder ...
-- 2 pins (1.27mm) on/off header 
+- 2 pins (1.27mm) on/off header (off mode consumes about 0.3mA on battery, a few tweaks can bring it down to 0.1 mA)
 - 2 pins (1.27mm) GPI/sensor header (see ESP32 documentation about sensor_vn and sensor_vp)
 - 6 pins (2.54mm) header provide 3.3V (output), GND, reset and serial flash download (boot, rx, tx - which can be reused at general purpose IO)
 - 2.5mm Power Jack with Vcc 5...16V (20V under certain conditions see note on power supply below)
@@ -24,7 +24,7 @@ Looking at the board, TOP refers to the side that has the WROVER module and LEFT
 
 With the squeezelite-esp32 software, you can
 
-- Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external i2s DAC if you connect it to the general purpose 5 pins connector and tweak the software. Synchronization works.
+- Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external I2S DAC if you connect it to the general purpose 5 pins connector and tweak the software. Synchronization works.
 - Stream from a Bluetooth device and send audio to the same outputs, except of course for sending to another bluetooth speaker ... There is no guarantee of audio/video synchronization at this point
 - Stream from an AirPlay1 device (iPhone, iTunes ...) to the same outputs, including to a bluetooth speaker. Synchronization works.
 
@@ -56,6 +56,10 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 1: +
 	- 2: -
 - J5: speaker connector
+	- 1: L+ (square pad)
+	- 2: L-
+	- 3: R+
+	- 4: R-
 - J6: IO extension connector (note that a right-angle and a straight versions exist)
 	- 1: (26) IO4
 	- 2: (29) IO17
@@ -77,13 +81,15 @@ All connectors are through-holes so that you can not populate them and directly 
 - TAS575x I2S WS/SD/CLK: (10) IO25 / (8) IO32 / (9) IO33
 - SPDIF: (23) IO15
 
+<strong>Note that is no reverse polarity protection on the battery pins, so be careful as it will toast the power switch TPS22810 and probably the PCB itself. There is polarity protection on the main.</strong>
+
 # Flash download & operation
 
 For at least initial download, you need a serial connection with ideally RX/TX/RTS/DTR and at least RX/TX. There is no build-in converter. 
 
-Connect RX/TX to J3 pin header. If you don't have DTR/boot, set the boot switch underneath and if don't have reset, press the tiny reset button.
+Connect RX/TX to J3 pin header. If you don't have DTR/boot, set the boot switch underneath and if don't have RTS/reset, press the tiny reset button.
 
-The esp32 will enter download and you'll be able to update the software, as described on the squeezelite-esp32 site. At the time of this writing, there is no OTA update, but it will come. Still, initial download will require such connection
+The esp32 will enter download and you'll be able to update the software, as described on the squeezelite-esp32 site.
 
 Don't forget to flip again the boot switch if you used it and the reset the board (or have the espressif tool do it for you), then follow the instructions [here](https://github.com/philippe44/squeezelite-esp32) or have fun with your own software
 
@@ -91,9 +97,9 @@ Don't forget to flip again the boot switch if you used it and the reset the boar
 
 System is modular and you can pretty much build each sub-part independently. 
 
-If you don't want battery, don't populate charger, undervoltage detection and power OR and boost (on the boost optio, see below). This is all top upper and middle right & left side of the PCB. You can short the large Schottky diode on the bottom side, but I recommend you keep it just in case.
+If you don't want battery, don't populate charger, undervoltage detection and power OR and boost (on the boost option, see below). This is all top upper and middle right & left side of the PCB. You can short the large Schottky diode on the bottom side, but I recommend you keep it just in case.
 
-If you don't want the amplifier, don't populate the bottom side, except for the power diode and the optical connector's decoupling capacitor (if you want SPDIF optical). In that case, note that the analogue output will not be available.
+If you don't want the amplifier, don't populate the bottom side, except for the power diode and the optical connector's decoupling capacitor (if you want SPDIF optical). In that case, note that the analogue output will *not* be available.
 
 The SPDIF is always available, it just requires the WROVER module (which should at least always be here ...). 
 
@@ -101,9 +107,7 @@ The battery connector is the angled version of the classical short 2 pins JST. Y
 
 # Power options
 
-<strong>!!!! The BOOST option still needs to be validated, only the BASIC option is proven !!!!</strong>
-
-I've been through a lot of back and forth about power. To charge 3-LiIon cells, the LT3652 requires at least 16V (Vbatt + 3.3V). But when powered with 16V, the TAS575x produces a fair bit of heat while it almost does not at 12V. Similar, the original design charging rate was 1A, but that got the LT3652 and inductor super hot, so I've reduced is to 0,66A (8W max). The rate is 0.1/R7 so you can tweak it if you want, on paper the design is capable of 1A.
+I've been through a lot of back and forth about power. To charge 3-LiIon cells, the LT3652 requires at least 16V (Vbatt + 3.3V). But when powered with 16V, the TAS575x produces a fair bit of heat while it almost does none at 12V. Similar, the original design charging rate was 1A, but that got the LT3652 and inductor super hot, so I've reduced is to 0,66A (8W max). The rate is 0.1/R7 so you can tweak it if you want, on paper the design is capable of 1A.
 
 When using 2 cells, a 12V power supply is sufficient which is ideal for the TAS575x, but then when used on battery the audio power is much less as the battery will provide 6~8.4V. Charging rate in that case is 0.75A. 
 
@@ -118,20 +122,22 @@ In 3 cells mode, the power supply must be 16-20V and a few components must be ch
 - R8 (412k) ==> 340k
 - R9 (634k)==> 953k
 - R11 (22.5k) ==> 15.8k
-- D5 (2.4V Zener) ==> 6.2V Zener
+- D5 (2.4V Zener) ==> 5~8V Zener (I use 5.1)
 - R7 (0.13) ==> 0.16
 
-In both case, if you limit the power supply to 16V, you can use 25V for all capacitors which saves a fair bit of cost for the 22µF ones. It does not change anything for others (indeed 50V can a be cheaper option for 100nF for example).
+In both case, if you limit the power supply to 16V, you can use 25V for all capacitors which saves a fair bit of cost for the 22µF. It does not change anything for others (indeed 50V can a be cheaper option for 100nF for example).
 
 ## Boost design
 
 This PCB option include a boost converter so that power supply can be 12V even in 3 cells modes. With that, the TAS575x is always powered with ~12V which is the ideal ratio heat/amplifier power. The boost converter will up the power supply to comply with LT3652 requirement of Vcc > VBat + 3.3V
 
-The values of R8, R9, R11, D5 and R7 need to be set per values above if you chose 3 cells. If you want to use 2 cells, it's better to change the boost feeback resistors R12 and R18 to produce 12V only, but it's not mandatory. I don't think that using boost and 2 cells makes lots of sense, better just use 12V then.
+The values of R8, R9, R11, D5 and R7 need to be set per values above if you chose 3 cells. If you want to use 2 cells, it's better to change the boost feeback resistors R12 and R18 to produce 12V only, but it's not mandatory. I don't think that using boost and 2 cells makes lots of sense, better just use basic and 12V then.
 
 If you use that PCB and don't populate the boost converter, you can put a shunt directly between D2 and D7 anode and cathode. But then the LT3652 charger is not protected against polarity inversion ... to fix that, as D2 and D7 are separated by enough space, you can use a 0805 diode like [this one](https://www.digikey.ca/product-detail/en/avx-corporation/SD0805S020S1R0/478-7800-1-ND/3749510) ... your choice.
 
-Understand that Boost option produces more heat when charging the battery. It's inherent to the cumulated efficiency losses by boosting up Vcc then switching it down to charge battery. You might prefer to use the basic option which produces more heat on the amplifer instead. There is no perfect option
+Understand that boost option produces more heat when charging the battery. It's inherent to the cumulated efficiency losses by boosting up Vcc then switching it down to charge battery. You might prefer to use the basic option which produces more heat on the amplifer instead. There is no perfect option.
+
+When disconnecting main power, the battery should kick-in without interruption, but there might be cases when playing at high volume where combination of switch/capacitors will not store enough energy (un-plugging the connector creates many bounces, it's not a clean cut). This does not happen with the basic version because the power OR will always feed the system and main is 3.3V above battery. In the boost version, the power OR is not enough to select the right source as the main voltage is a bit below the battery voltage (and we don't want battery to feed the system when plugged on main), so the undervoltage switch is re-used to disconnect the battery when main is plugged. But the control of that switch might not act as fast desired. You can add a large electrolytic cap anywhere after the battery and main power OR. 
 
 The comment on capacitor voltage ratings apply as the boost is 16V only, so 25V works as it is below Vcc * 1.45
 
@@ -145,7 +151,7 @@ The comment on capacitor voltage ratings apply as the boost is 16V only, so 25V 
 	- want more audio power: 
 		- don't care much about amplifier's heat: choose basic (3 cells) and power it with 16+V (put a sink on the TAS575X and the exposed pad). 
 		- want to minimize amplifier's heat, choose boost (3 cells) and power it with 12V
-	- want simply to power with less than 12V, choose boost (2 or 3 cells). Be aware that the amplifier will be powered by the battery directly, even while charging, when its voltage is above the power supply. I still need to work on that issue.
+	- want simply to power with less than 12V, choose boost (2 or 3 cells). 
 
 # Limitation & Disclaimer
 
@@ -153,7 +159,7 @@ This contains a power amplifier and a charger on a small board, so it gets prett
 
 Similarly, the charger is for Li-Ion and such cells have inherent safety issues. It's using a LT3652, which is a good charger that takes care of battery maintenance, but there is no thermal management, so be careful and ALWAYS use protected Li-Ion cells. There is battery undervoltage detection on board so that the systems shuts off when battery voltage is too low. There is no under voltage detection for main supply.
 
-<strong>This is by no mean a professional design so use it at your own risk. I will not be liable for any issue caused by that board</strong>. I'm making it public in case somebody with enough knowledge will find it useful, so know you're doign first. Similarly, this is not an audophile design, so please do not complain or ask me for some linear power or 32 bits / DSD insanities. The SqueezeESP software can do 16 bits @ 192 kHz which is way more than enough, in fact 48kHz/16 should be sufficient. 
+<strong>This is by no mean a professional design so use it at your own risk. I will not be liable for any issue caused by that board</strong>. I'm making it public in case somebody with enough knowledge will find it useful, so know youwhat 're doing first. Similarly, this is not an audophile design, so please do not complain or ask me for some linear power or 32 bits / DSD insanities. The SqueezeESP software can do 16 bits @ 192 kHz which is way more than enough, in fact 48kHz/16 should be sufficient. 
 
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/top.png?raw=true)
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/bottom.png?raw=true)
