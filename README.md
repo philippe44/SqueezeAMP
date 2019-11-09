@@ -47,9 +47,9 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 4: (6 - IO34) Detect ==> has pull-up and should be set to ground to detect jack insertion
 - J3: main header
 	- 1: GND
-	- 2: EN/reset (3)
+	- 2: EN/reset (3) ==> connect to RTS if possible
 	- 3: 3.3V output
-	- 4: Boot (25) IO0 ==> pull down at reset to enter download mode
+	- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
 	- 5: RX (34) IO1
 	- 6: TX (35) IO3
 - J4: battery connector
