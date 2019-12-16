@@ -141,6 +141,10 @@ When disconnecting main power, the battery should kick-in without interruption, 
 
 The comment on capacitor voltage ratings apply as the boost is 16V only, so 25V works as it is below Vcc * 1.45
 
+## Version 1.x and 2.x
+
+Version 2.x uses the TAS578x instead of TAS575x.The PCB change is tiny but critical as TAS578x has a reset pin that must be pulled high (direct Vcc connection, no room for a proper pull-up resistor) otherwise it does not boot. Normally, version 2.x can be used with TAS575x, providing that the TAS578x reset pin which is a GPIO in TAS575x is not driven low.
+
 ## (Executive) Summary
 
 - don't want battery, use the basic version and maybe do not populate all the charger-related components
