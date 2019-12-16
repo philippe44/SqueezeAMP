@@ -121,7 +121,7 @@ In 3 cells mode, the power supply must be 16-20V and a few components must be ch
 
 - R8 (412k) ==> 340k
 - R9 (634k)==> 953k
-- R11 (22.5k) ==> 15.8k
+- R11 (25.5k) ==> 15.8k
 - D5 (2.4V Zener) ==> 5~8V Zener (I use 5.1)
 - R7 (0.13) ==> 0.16
 
