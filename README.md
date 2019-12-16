@@ -168,7 +168,7 @@ Similarly, the charger is for Li-Ion and such cells have inherent safety issues.
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/top.png?raw=true)
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/bottom.png?raw=true)
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/top-boost.png?raw=true)
-![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/IMG_5330.jpg?raw=true)
-![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/IMG_5331.jpg?raw=true)
+![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/IMG_5330.png?raw=true)
+![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/IMG_5331.png?raw=true)
 
 
