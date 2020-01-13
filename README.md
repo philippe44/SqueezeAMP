@@ -48,14 +48,14 @@ All connectors are through-holes so that you can not populate them and directly 
 - J2: audio jack 
 	- 4: (6 - IO34) Detect ==> has pull-up and should be set to ground to detect jack insertion
 - J3: main header 
-	- 1.x and 2.x
+	- PCB 1.x and 2.x
 		- 1: GND
 		- 2: EN/reset (3) ==> connect to RTS if possible
 		- 3: 3.3V output
 		- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
 		- 5: RX (34) IO1
 		- 6: TX (35) IO3
-	- 3.x and above
+	- PCB 3.x and above
 		- 1: GND
 		- 2: 3.3V output
 		- 3: RX (34) IO1
@@ -71,13 +71,13 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 3: R-
 	- 4: R+
 - J6: IO extension connector (note that a right-angle and a straight versions exist)
-	- 1.x and 2.x
+	- PCB 1.x and 2.x
 		- 1: (26) IO4
 		- 2: (29) IO5
 		- 3: (30) IO18
 		- 4: (31) IO19
 		- 5: (33) IO21
-	- 3.x and above: added pins
+	- PCB 3.x and above: added pins
 		- 6: (35) IO2/GND depending on S2
 		- 7: (36) IO22
 		- 8: (37) IO23
