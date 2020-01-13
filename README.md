@@ -10,7 +10,7 @@ It includes the following:
 - Direct speaker output
 - Jack 3.5mm for analogue line-out (with insertion detection) ==> <strong>this NOT supposed to be a headset output but it seems to drive enough for small 3 pins headphones at decent volume (need to check)</strong>
 - SDPIF optical output
-- Connector for 5 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, rotary encoder ...
+- Connector for 5/8 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, rotary encoder ...
 - 2 pins (1.27mm) on/off header (off mode consumes about 0.3mA on battery, a few tweaks can bring it down to 0.1 mA)
 - 2 pins (1.27mm) GPI/sensor header (see ESP32 documentation about sensor_vn and sensor_vp)
 - 6 pins (2.54mm) header provide 3.3V (output), GND, reset and serial flash download (boot, rx, tx - which can be reused at general purpose IO)
@@ -24,7 +24,7 @@ Looking at the board, TOP refers to the side that has the WROVER module and LEFT
 
 With the squeezelite-esp32 software, you can
 
-- Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external I2S DAC if you connect it to the general purpose 5 pins connector and tweak the software. Synchronization works.
+- Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external I2S DAC if you connect it to the general purpose 5/8 pins connector and tweak the software. Synchronization works.
 - Stream from a Bluetooth device and send audio to the same outputs, except of course for sending to another bluetooth speaker ... There is no guarantee of audio/video synchronization at this point
 - Stream from an AirPlay1 device (iPhone, iTunes ...) to the same outputs, including to a bluetooth speaker. Synchronization works.
 
@@ -45,13 +45,21 @@ All connectors are through-holes so that you can not populate them and directly 
 - J1: power jack
 - J2: audio jack 
 	- 4: (6 - IO34) Detect ==> has pull-up and should be set to ground to detect jack insertion
-- J3: main header
-	- 1: GND
-	- 2: EN/reset (3) ==> connect to RTS if possible
-	- 3: 3.3V output
-	- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
-	- 5: RX (34) IO1
-	- 6: TX (35) IO3
+- J3: main header 
+	1.x and 2.x
+		- 1: GND
+		- 2: EN/reset (3) ==> connect to RTS if possible
+		- 3: 3.3V output
+		- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
+		- 5: RX (34) IO1
+		- 6: TX (35) IO3
+	3.x and above
+		- 1: GND
+		- 2: 3.3V output
+		- 3: RX (34) IO1
+		- 4: TX (35) IO3
+		- 5: EN/reset (3) ==> connect to RTS if possible
+		- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
 - J4: battery connector
 	- 1: +
 	- 2: -
@@ -61,11 +69,21 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 3: R-
 	- 4: R+
 - J6: IO extension connector (note that a right-angle and a straight versions exist)
-	- 1: (26) IO4
-	- 2: (29) IO17
-	- 3: (30) IO18
-	- 4: (31) IO19
-	- 5: (33) IO21
+	1.x and 2.x
+		- 1: (26) IO4
+		- 2: (29) IO5
+		- 3: (30) IO18
+		- 4: (31) IO19
+		- 5: (33) IO21
+	3.x and above	
+		- 1: (26) IO4
+		- 2: (29) IO5
+		- 3: (30) IO18
+		- 4: (31) IO19
+		- 5: (33) IO21
+		- 6: (35) IO2/GND depending on S2
+		- 5: (36) IO22
+		- 5: (37) IO23
 - J7: on/off (on when floating/open)	
 	- 1: GND
 	- 2: ENable ==> short with pin 1/GND to switch off 3.3V power
