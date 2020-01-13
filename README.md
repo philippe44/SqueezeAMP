@@ -40,20 +40,20 @@ Download tool is [here](https://www.espressif.com/en/support/download/other-tool
 
 (Under parenthesis is the WROVER pin number)
 
-All connectors are through-holes so that you can not populate them and directly solder wires if you want to use the board inside another equipment.
+All connectors are through-holes so that you can not populate them and directly solder wires if you want to use the board inside another equipment. There are differences between PCB 3.X and others
 
 - J1: power jack
 - J2: audio jack 
 	- 4: (6 - IO34) Detect ==> has pull-up and should be set to ground to detect jack insertion
 - J3: main header 
-	1.x and 2.x
+	- 1.x and 2.x
 		- 1: GND
 		- 2: EN/reset (3) ==> connect to RTS if possible
 		- 3: 3.3V output
 		- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
 		- 5: RX (34) IO1
 		- 6: TX (35) IO3
-	3.x and above
+	- 3.x and above
 		- 1: GND
 		- 2: 3.3V output
 		- 3: RX (34) IO1
@@ -69,28 +69,28 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 3: R-
 	- 4: R+
 - J6: IO extension connector (note that a right-angle and a straight versions exist)
-	1.x and 2.x
+	- 1.x and 2.x
 		- 1: (26) IO4
 		- 2: (29) IO5
 		- 3: (30) IO18
 		- 4: (31) IO19
 		- 5: (33) IO21
-	3.x and above	
+	- 3.x and above	
 		- 1: (26) IO4
 		- 2: (29) IO5
 		- 3: (30) IO18
 		- 4: (31) IO19
 		- 5: (33) IO21
 		- 6: (35) IO2/GND depending on S2
-		- 5: (36) IO22
-		- 5: (37) IO23
+		- 7: (36) IO22
+		- 8: (37) IO23
 - J7: on/off (on when floating/open)	
 	- 1: GND
 	- 2: ENable ==> short with pin 1/GND to switch off 3.3V power
 - J8: Input/Sensor connector
 	- 1: (5) IO39
 	- 2: (4) IO36
-- S2: boot switch
+- S2: boot switch on 1.x and 2.x and select J6 pin 6 between GND and IO2 on 3.x
 - Green LED: (14) IO12, active low
 - Red LED: (16) IO13, active low
 - TAS575x Speaker mute (13) IO14
