@@ -10,7 +10,7 @@ It includes the following:
 - Direct speaker output
 - Jack 3.5mm for analogue line-out (with insertion detection) ==> <strong>this NOT supposed to be a headset output but it seems to drive enough for small 3 pins headphones at decent volume (need to check)</strong>
 - SDPIF optical output
-- Connector for 5 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, rotary encoder ...
+- Connector for 5/8 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, buttons, rotary encoder ...
 - 2 pins (1.27mm) on/off header (off mode consumes about 0.3mA on battery, a few tweaks can bring it down to 0.1 mA)
 - 2 pins (1.27mm) GPI/sensor header (see ESP32 documentation about sensor_vn and sensor_vp)
 - 6 pins (2.54mm) header provide 3.3V (output), GND, reset and serial flash download (boot, rx, tx - which can be reused at general purpose IO)
@@ -24,9 +24,11 @@ Looking at the board, TOP refers to the side that has the WROVER module and LEFT
 
 With the squeezelite-esp32 software, you can
 
-- Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external I2S DAC if you connect it to the general purpose 5 pins connector and tweak the software. Synchronization works.
+- Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external I2S DAC if you connect it to the general purpose 5/8 pins connector and tweak the software. Synchronization works.
 - Stream from a Bluetooth device and send audio to the same outputs, except of course for sending to another bluetooth speaker ... There is no guarantee of audio/video synchronization at this point
 - Stream from an AirPlay1 device (iPhone, iTunes ...) to the same outputs, including to a bluetooth speaker. Synchronization works.
+- Add your own buttons (no rotary encoder yet) and map/combine them to various functions (play, pause, volume, next ...
+- Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins headers on PCB 3.x. Currently, only SSD1306-based displays are supported and for LMS only.
 
 # Tools, source and BOM
 
@@ -38,20 +40,28 @@ Download tool is [here](https://www.espressif.com/en/support/download/other-tool
 
 ## Connectors & WROVER pin assignments
 
-(Under parenthesis is the WROVER pin number)
+There are 3 PCB version, with a basic and a boost option for each one (see below for basic/boot differences).
 
-All connectors are through-holes so that you can not populate them and directly solder wires if you want to use the board inside another equipment.
+All connectors are through-holes so that you can not populate them and directly solder wires if you want to use the board inside another equipment (Under parenthesis is the WROVER pin number).
 
 - J1: power jack
 - J2: audio jack 
 	- 4: (6 - IO34) Detect ==> has pull-up and should be set to ground to detect jack insertion
-- J3: main header
-	- 1: GND
-	- 2: EN/reset (3) ==> connect to RTS if possible
-	- 3: 3.3V output
-	- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
-	- 5: RX (34) IO1
-	- 6: TX (35) IO3
+- J3: main header 
+	- PCB 1.x and 2.x
+		- 1: GND
+		- 2: EN/reset (3) ==> connect to RTS if possible
+		- 3: 3.3V output
+		- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
+		- 5: RX (34) IO1
+		- 6: TX (35) IO3
+	- PCB 3.x and above
+		- 1: GND
+		- 2: 3.3V output
+		- 3: RX (34) IO1
+		- 4: TX (35) IO3
+		- 5: EN/reset (3) ==> connect to RTS if possible
+		- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
 - J4: battery connector
 	- 1: +
 	- 2: -
@@ -61,18 +71,23 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 3: R-
 	- 4: R+
 - J6: IO extension connector (note that a right-angle and a straight versions exist)
-	- 1: (26) IO4
-	- 2: (29) IO17
-	- 3: (30) IO18
-	- 4: (31) IO19
-	- 5: (33) IO21
+	- PCB 1.x and 2.x
+		- 1: (26) IO4
+		- 2: (29) IO5
+		- 3: (30) IO18
+		- 4: (31) IO19
+		- 5: (33) IO21
+	- PCB 3.x and above: added pins
+		- 6: (35) IO2/GND depending on S2
+		- 7: (36) IO22
+		- 8: (37) IO23
 - J7: on/off (on when floating/open)	
 	- 1: GND
 	- 2: ENable ==> short with pin 1/GND to switch off 3.3V power
 - J8: Input/Sensor connector
 	- 1: (5) IO39
 	- 2: (4) IO36
-- S2: boot switch
+- S2: boot switch on 1.x and 2.x and select J6 pin 6 between GND and IO2 on 3.x
 - Green LED: (14) IO12, active low
 - Red LED: (16) IO13, active low
 - TAS575x Speaker mute (13) IO14
@@ -87,9 +102,9 @@ All connectors are through-holes so that you can not populate them and directly 
 
 For at least initial download, you need a serial connection with ideally RX/TX/RTS/DTR and at least RX/TX. There is no build-in converter. 
 
-Connect RX/TX to J3 pin header. If you don't have DTR/boot, set the boot switch underneath and if don't have RTS/reset, press the tiny reset button.
+Connect RX/TX to J3 pin header. If you don't have DTR/boot, set the boot switch underneath (onPCB before 3.x) and if don't have RTS/reset, press the tiny reset button. After PCB 3.x, you must connect DWL to ground while resetting (simply put a wire on pin 6 of J3 and connect it to any ground)
 
-The esp32 will enter download and you'll be able to update the software, as described on the squeezelite-esp32 site.
+The esp32 will enter download and you'll be able to update the software, as described on the squeezelite-esp32 site. This procedure is rarely needed as the software supports OTA update.
 
 Don't forget to flip again the boot switch if you used it and the reset the board (or have the espressif tool do it for you), then follow the instructions [here](https://github.com/philippe44/squeezelite-esp32) or have fun with your own software
 
@@ -141,9 +156,13 @@ When disconnecting main power, the battery should kick-in without interruption, 
 
 The comment on capacitor voltage ratings apply as the boost is 16V only, so 25V works as it is below Vcc * 1.45
 
-## Version 1.x and 2.x
+## Versions
 
 Version 2.x uses the TAS578x instead of TAS575x.The PCB change is tiny but critical as TAS578x has a reset pin that must be pulled high (direct Vcc connection, no room for a proper pull-up resistor) otherwise it does not boot. Normally, version 2.x can be used with TAS575x, providing that the TAS578x reset pin which is a GPIO in TAS575x is not driven low.
+ 
+Version 3.x expands the J6 5 pins I/O connector to 8 pins and changes S2 slide switch function to select pin 6 of this connector to be either ground or GPIO2. The 6 pins header is reshuffled to allow of an OLED display without wires. 
+
+The benefit of changing J6's pin 6 to GND is, for example, to bring a GND wire to a button expansion board of your own. There is no need of Vcc as the ESP32 has optional pull-up. Still, if you want a Vcc, you can use one GPIO as a supply, with a maximum of 40mA per pin. 
 
 ## (Executive) Summary
 
