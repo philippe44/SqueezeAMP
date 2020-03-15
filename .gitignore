@@ -19,4 +19,5 @@ data/
 models/
 fw/
 PCBWay
-
+gerber/
+SSD*
