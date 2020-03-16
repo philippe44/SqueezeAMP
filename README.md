@@ -76,7 +76,7 @@ All connectors are through-holes so that you can not populate them and directly 
 - J7: on/off (on when floating/open)	
 	- 1: GND
 	- 2: ENable ==> short with pin 1/GND to switch off 3.3V power
-- J8: Input/Sensor connector
+- J8: Input/Sensor connector (inputs only, no internal pull-up)
 	- 1: (5) IO39
 	- 2: (4) IO36
 - J10: Power source
@@ -105,11 +105,13 @@ Follow the instructions [here](https://github.com/philippe44/squeezelite-esp32) 
 
 # Usage comments
 
-Now that displays, rotary encoder and buttons are supported by the firmware, you need power and more IOs. You can use power from J6 of course, but if you use it to directly connect a display like [this](https://www.amazon.com/MakerFocus-Display-SSD1306-3-3V-5V-Arduino/dp/B0761LV1SD/) (and remember that since PCB 3.x, it is a direct board-to-board fit) you might want another source so you can use J10. You can as well use extended J6 pin above or below to grab 3.3V from there.
+Now that since displays, rotary encoder and buttons are supported by the firmware, you need power and more IOs. You can use power from J6 of course, but if you use it to directly connect a display like [this](https://www.amazon.com/MakerFocus-Display-SSD1306-3-3V-5V-Arduino/dp/B0761LV1SD/) (and remember that since PCB 3.x, it is a direct board-to-board fit) you might want another source so you can use J10. You can as well use extended J6 pin above or below to grab 3.3V from there.
 
 The benefit of changing J6's pin 6 to GND is, for example, to bring a GND wire to a button expansion board of your own. There is no need of Vcc as the ESP32 has optional pull-up. Still, if you want a Vcc, you can use one GPIO as a supply, with a maximum of 40mA per pin. That would allow you to use a single connector for the IOs and a display on J6. You could have Vcc, GND, 3 pins for a rotary, play, back, vol+, vol- which is a pretty good UI.
 
 All 2-pin connectors have been changed to support standard 1.25mm connectors like [this](https://www.ebay.ca/itm/50Set-Micro-JST1-25-2Pin-Connector-Plug-with-Wire-150mm-28AWG/182056647596) so that you can find pre-wired female cables and not go through the pain of using these tiny crimps. The male header is a really tight fit on the PCB, but it works. You can also always solder wires if you want  to.
+
+<strong>All GPIO have internal pull-up/down that you can set by software, so in most cases you don't need to bring power to buttons/encoder board, except if you use J8. These are inputs only and have no pull-up, so you need to add them on your IO board.</strong>
 
 # Populating options
 
