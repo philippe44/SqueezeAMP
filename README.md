@@ -1,6 +1,6 @@
 # SqueezeAMP: an all-in-one audio sub-system
 
-NOTE: for clarity reasons, I've created a branch 3.x which is teh new default. I'll remove all references to PCB before 3.11 in that branch. Look at "master" to have history
+NOTE: for clarity reasons, I've created a branch 3.x which is the new default. I'll remove all references to PCB before 3.11 in that branch. Look at "master" to have history
 
 This design can be used as a general all-in-one audio subsystem, but it's specially made to match the [SqueezeESP project](https://github.com/philippe44/squeezelite-esp32).
 It includes the following:
