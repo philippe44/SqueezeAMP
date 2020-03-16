@@ -1,86 +1,87 @@
-"RefDes","Value","Name","Part"
-"C1","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C2","1uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014"
-"C3","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"C4","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"C5","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C6","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C7","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C8","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C9","1uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014"
-"C10","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C11","1uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014"
-"C12","1uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014"
-"C13","1uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014"
-"C14","2u2F 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561"
-"C15","2u2F 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561"
-"C16","1uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014"
-"C17","220nF 35v","CAP_0805","https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302"
-"C18","2u2F 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561"
-"C19","2u2F 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561"
-"C20","680nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509"
-"C21","1uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014"
-"C22","220nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302"
-"C23","220nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302"
-"C24","220nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302"
-"C25","680nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509"
-"C26","680nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509"
-"C27","680nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509"
-"C28","680nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509"
-"C29","22uF 25V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C30","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C31","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"C32","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"C36","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"C41","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C42","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"C43","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"C44","22uF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094"
-"C45","100nF 35V","CAP_0805","https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145"
-"D1","LED","0805","https://www.digikey.ca/product-detail/en/kingbright/APT2012LSECK-J3-PRV/754-1935-1-ND/5177465"
-"D2","Schottky 40V 2A","SOD123F","https://www.digikey.ca/product-detail/en/diodes-incorporated/B240S1F-7/B240S1F-7DICT-ND/7784165"
-"D3","Schottky 40V 2A","SOD123F","https://www.digikey.ca/product-detail/en/diodes-incorporated/B240S1F-7/B240S1F-7DICT-ND/7784165"
-"D4","Diode 100mA","SOD123F","https://www.digikey.ca/product-detail/en/diodes-incorporated/BAV21HWF-7/BAV21HWF-7DICT-ND/5451809"
-"D5","Zener 2.4V 100mA","SOD123F","https://www.digikey.ca/product-detail/en/BZT52B2V4+RHG/BZT52B2V4RHGCT-ND/7357321"
-"D6","Schottky 40V 3A","MBRS340","https://www.digikey.ca/product-detail/en/diodes-incorporated/B340A-13-F/B340A-FDICT-ND/725054"
-"D8","Dual LED","754-1965-1-ND","https://www.digikey.ca/product-detail/en/kingbright/APBD3224LSURKZGKC/754-1965-1-ND/5803684"
-"J1","Power Jack 2.1","PJ-047B","https://www.digikey.ca/product-detail/en/PJ-047AH/CP-047AH-ND/1644577/"
-"J2","3.5mm Jack 4 points","SJ-43514","https://www.digikey.ca/product-detail/en/cui-inc/SJ-43514/CP-43514-ND/368146"
-"J3","6 pins header 2.54","CONN","https://www.digikey.ca/product-detail/en/amphenol-icc-fci/68000-406HLF/609-3263-ND/1878471"
-"J4","Header 2 pin 2.54 mm","Header","https://www.digikey.ca/product-detail/en/jst-sales-america-inc/S2B-XH-A-1(LF)(SN)/455-4226-ND/9961922"
-"J5","Term Header 4 Pos","WM7860-ND","https://www.digikey.ca/product-detail/en/molex/0393570004/WM7860-ND/1280711"
-"J6","Molex ML+ 5 pins","Molex MicroLockPlus 5","https://www.digikey.ca/product-detail/en/molex/5055670571/WM17041CT-ND/7807040"
-"J7","Header 2 pins 1.27","Header","https://www.digikey.ca/product-detail/en/harwin-inc/M50-3530242/952-3598-ND/7044013"
-"J8","Header 2 pins 1.27","952-3598-ND","https://www.digikey.ca/product-detail/en/harwin-inc/M50-3530242/952-3598-ND/7044013"
-"L1","4.7uH","1255AY-4R7M=P3","https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554"
-"L2","4.7uH","1255AY-4R7M=P3","https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554"
-"L3","4.7uH","1255AY-4R7M=P3","https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554"
-"L4","4.7uH","1255AY-4R7M=P3","https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554"
-"L5","10uH","ASPI-4030S","https://www.digikey.ca/product-detail/en/abracon-llc/ASPI-4030S-100M-T/535-12314-1-ND/4214914"
-"L6","22uH","IND_1210","https://www.digikey.ca/product-detail/en/taiyo-yuden/CBC3225T220MR/587-1626-1-ND/1008241"
-"Q1","MOFSET-N 2.5A 60V","SOT-23F	","https://www.digikey.ca/products/en?keywords=SSM3K318RLFDKR-ND"
-"R1","100k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07100KL/311-100KCRCT-ND/730491"
-"R2","22k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0722KL/311-22.0KCRCT-ND/730683"
-"R3","22k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0722KL/311-22.0KCRCT-ND/730683"
-"R4","150K","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07150KL/311-150KCRCT-ND/730561"
-"R5","270","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805JR-07270RL/311-270ARCT-ND/731238"
-"R6","680","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07680RL/311-680CRCT-ND/731048"
-"R7","0.13","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RL0805FR-070R13L/311-.13SCT-ND/1037214"
-"R8","634k - 0.1%","RES_0805","https://www.digikey.ca/product-detail/en/ERJ-6ENF6343V/P634KCCT-ND/20073/"
-"R9","412k - 0.1%","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07412KL/311-412KCRCT-ND/730894"
-"R10","110k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07110KL/311-110KCRCT-ND/730507"
-"R11","25.5k","RES_0805","https://www.digikey.ca/product-detail/en/RC0805FR-0725K5L/311-25.5KCRCT-ND/730715"
-"R13","750k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07750KL/311-750KCRCT-ND/731082"
-"R14","10k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0710KL/311-10.0KCRTR-ND/727535"
-"R15","10k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0710KL/311-10.0KCRTR-ND/727535"
-"R16","174k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07174KL/311-174KCRCT-ND/730587"
-"R17","10k","RES_0805","https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0710KL/311-10.0KCRTR-ND/727535"
-"S1","Reset SW","EVPBB","https://www.digikey.ca/product-detail/en/panasonic-electronic-components/EVP-BB2A9B000/P19888CT-ND/6212411"
-"S2","Boot Mode","CJS-1200TA","https://www.digikey.ca/product-detail/en/nidec-copal-electronics/CJS-1200TA/563-1021-1-ND/948401"
-"U1","Buck DC/DC","TPS54202","https://www.digikey.ca/product-detail/en/texas-instruments/TPS54202DDCT/296-44151-1-ND/6021980"
-"U2","TAS5754M","TAS575xM","https://www.digikey.ca/product-detail/en/texas-instruments/TAS5754MDCAR/296-40564-1-ND/5178441"
-"U3","Charger","LT3652EMSE","https://www.digikey.ca/product-detail/en/linear-technology-analog-devices/LT3652EMSE-PBF/LT3652EMSE-PBF-ND/2225686"
-"U4","Diode Controller","LM74700-Q1","https://www.digikey.ca/product-detail/en/texas-instruments/LM74700QDBVTQ1/296-53420-1-ND/9953065"
-"U5","SPDIF plug","PLT133/10W","https://www.digikey.ca/product-detail/en/everlight-electronics-co-ltd/PLT133-T10W/1080-1430-ND/2693977"
-"U6","ESP32-WROVER","ESP32-WROVER","https://www.digikey.ca/product-detail/en/espressif-systems/ESP32-WROVER-B-(M213DH6464PC3Q0)/1904-1034-1-ND/9857845"
-"U7","Power Switch","TPS22810","https://www.digikey.ca/product-detail/en/texas-instruments/TPS22810DBVR/296-45297-1-ND/6599926"
+RefDes;Value;Name;Part
+C1;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C2;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C3;100nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145
+C4;100nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145
+C5;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C6;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C7;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C8;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C9;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C10;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C11;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C12;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C13;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C14;2u2F 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561
+C15;2u2F 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561
+C16;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C17;220nF 35v;CAP_0805;https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302
+C18;2u2F 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561
+C19;2u2F 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21A225KBFNNNE/1276-6702-1-ND/5961561
+C20;680nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509
+C21;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C22;220nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302
+C23;220nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302
+C24;220nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/wurth-electronics-inc/885012207100/732-7675-1-ND/5454302
+C25;680nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509
+C26;680nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509
+C27;680nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509
+C28;680nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1H684K125AB/445-14413-6-ND/3960509
+C29;22uF 25V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C30;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C31;100nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145
+C32;1uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KBFNFNE/1276-2928-1-ND/3891014
+C36;100nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145
+C41;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C42;100nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145
+C43;100nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145
+C44;22uF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/tdk-corporation/C2012X5R1V226M125AC/445-14428-1-ND/3956094
+C45;100nF 35V;CAP_0805;https://www.digikey.ca/product-detail/en/yageo/CC0805ZRY5V9BB104/311-1361-1-ND/2103145
+D1;LED;805;https://www.digikey.ca/product-detail/en/kingbright/APT2012LSECK-J3-PRV/754-1935-1-ND/5177465
+D2;Schottky 40V 2A;SOD123F;https://www.digikey.ca/product-detail/en/diodes-incorporated/B240S1F-7/B240S1F-7DICT-ND/7784165
+D3;Schottky 40V 2A;SOD123F;https://www.digikey.ca/product-detail/en/diodes-incorporated/B240S1F-7/B240S1F-7DICT-ND/7784165
+D4;Diode 100mA;SOD123F;https://www.digikey.ca/product-detail/en/diodes-incorporated/BAV21HWF-7/BAV21HWF-7DICT-ND/5451809
+D5;Zener 2.4V 100mA;SOD123F;https://www.digikey.ca/product-detail/en/BZT52B2V4+RHG/BZT52B2V4RHGCT-ND/7357321
+D6;Schottky 40V 3A;MBRS340;https://www.digikey.ca/product-detail/en/diodes-incorporated/B340A-13-F/B340A-FDICT-ND/725054
+D8;Dual LED;754-1965-1-ND;https://www.digikey.ca/product-detail/en/kingbright/APBD3224LSURKZGKC/754-1965-1-ND/5803684
+J1;Power Jack 2.1;PJ-047B;https://www.digikey.ca/product-detail/en/PJ-047AH/CP-047AH-ND/1644577/
+J2;3.5mm Jack 4 points;SJ-43514;https://www.digikey.ca/product-detail/en/cui-inc/SJ-43514/CP-43514-ND/368146
+J3;6 pins header 2.54;CONN;https://www.digikey.ca/product-detail/en/amphenol-icc-fci/68000-406HLF/609-3263-ND/1878471
+J4;Header 2 pin 2.54 mm;Header;https://www.digikey.ca/product-detail/en/jst-sales-america-inc/S2B-XH-A-1(LF)(SN)/455-4226-ND/9961922
+J5;Term Header 4 Pos;WM7860-ND;https://www.digikey.ca/product-detail/en/molex/0393570004/WM7860-ND/1280711
+J6;Molex ML+ 8 pins;Molex MicroLockPlus 8;https://www.digikey.ca/product-detail/en/molex/5055670871/WM17115CT-ND/7908449
+J7;Header 2 pins 1.27;Header;https://www.digikey.ca/product-detail/en/125SH-B-02-TS/2057-125SH-B-02-TS-ND/9830561/
+J8;Header 2 pins 1.27;Header;https://www.digikey.ca/product-detail/en/125SH-B-02-TS/2057-125SH-B-02-TS-ND/9830561/
+J10;Header 2 pins 1.27;Header;https://www.digikey.ca/product-detail/en/125SH-B-02-TS/2057-125SH-B-02-TS-ND/9830561/
+L1;4.7uH;1255AY-4R7M=P3;https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554
+L2;4.7uH;1255AY-4R7M=P3;https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554
+L3;4.7uH;1255AY-4R7M=P3;https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554
+L4;4.7uH;1255AY-4R7M=P3;https://www.digikey.ca/product-detail/en/murata-electronics-north-america/1255AY-4R7M=P3/490-10812-1-ND/5271554
+L5;10uH;ASPI-4030S;https://www.digikey.ca/product-detail/en/abracon-llc/ASPI-4030S-100M-T/535-12314-1-ND/4214914
+L6;22uH;IND_1210;https://www.digikey.ca/product-detail/en/taiyo-yuden/CBC3225T220MR/587-1626-1-ND/1008241
+Q1;MOFSET-N 2.5A 60V;"SOT-23F	";https://www.digikey.ca/products/en?keywords=SSM3K318RLFDKR-ND
+R1;100k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07100KL/311-100KCRCT-ND/730491
+R2;22k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0722KL/311-22.0KCRCT-ND/730683
+R3;22k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0722KL/311-22.0KCRCT-ND/730683
+R4;150K;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07150KL/311-150KCRCT-ND/730561
+R5;270;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805JR-07270RL/311-270ARCT-ND/731238
+R6;680;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07680RL/311-680CRCT-ND/731048
+R7;0.13;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RL0805FR-070R13L/311-.13SCT-ND/1037214
+R8;634k - 0.1%;RES_0805;https://www.digikey.ca/product-detail/en/ERJ-6ENF6343V/P634KCCT-ND/20073/
+R9;412k - 0.1%;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07412KL/311-412KCRCT-ND/730894
+R10;110k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07110KL/311-110KCRCT-ND/730507
+R11;25.5k;RES_0805;https://www.digikey.ca/product-detail/en/RC0805FR-0725K5L/311-25.5KCRCT-ND/730715
+R13;750k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07750KL/311-750KCRCT-ND/731082
+R14;10k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0710KL/311-10.0KCRTR-ND/727535
+R15;10k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0710KL/311-10.0KCRTR-ND/727535
+R16;174k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-07174KL/311-174KCRCT-ND/730587
+R17;10k;RES_0805;https://www.digikey.ca/product-detail/en/yageo/RC0805FR-0710KL/311-10.0KCRTR-ND/727535
+S1;Reset SW;EVPBB;https://www.digikey.ca/product-detail/en/panasonic-electronic-components/EVP-BB2A9B000/P19888CT-ND/6212411
+S2;Boot Mode;CJS-1200TA;https://www.digikey.ca/product-detail/en/nidec-copal-electronics/CJS-1200TA/563-1021-1-ND/948401
+U1;Buck DC/DC;TPS54202;https://www.digikey.ca/product-detail/en/texas-instruments/TPS54202DDCT/296-44151-1-ND/6021980
+U2;TAS5754M;TAS575xM;https://www.digikey.ca/product-detail/en/texas-instruments/TAS5754MDCAR/296-40564-1-ND/5178441
+U3;Charger;LT3652EMSE;https://www.digikey.ca/product-detail/en/linear-technology-analog-devices/LT3652EMSE-PBF/LT3652EMSE-PBF-ND/2225686
+U4;Diode Controller;LM74700-Q1;https://www.digikey.ca/product-detail/en/texas-instruments/LM74700QDBVTQ1/296-53420-1-ND/9953065
+U5;SPDIF plug;PLT133/10W;https://www.digikey.ca/product-detail/en/everlight-electronics-co-ltd/PLT133-T10W/1080-1430-ND/2693977
+U6;ESP32-WROVER;ESP32-WROVER;https://www.digikey.ca/product-detail/en/espressif-systems/ESP32-WROVER-B-(M213DH6464PC3Q0)/1904-1034-1-ND/9857845
+U7;Power Switch;TPS22810;https://www.digikey.ca/product-detail/en/texas-instruments/TPS22810DBVR/296-45297-1-ND/6599926
