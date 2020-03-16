@@ -1,5 +1,7 @@
 # SqueezeAMP: an all-in-one audio sub-system
 
+NOTE: for clarity reasons, I've created a branch 3.x which is the new default. I'll remove all references to PCB before 3.11 in that branch. Look at "master" to have history
+
 This design can be used as a general all-in-one audio subsystem, but it's specially made to match the [SqueezeESP project](https://github.com/philippe44/squeezelite-esp32).
 It includes the following:
 
@@ -27,8 +29,8 @@ With the squeezelite-esp32 software, you can
 - Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external I2S DAC if you connect it to the general purpose 5/8 pins connector and tweak the software. Synchronization works.
 - Stream from a Bluetooth device and send audio to the same outputs, except of course for sending to another bluetooth speaker ... There is no guarantee of audio/video synchronization at this point
 - Stream from an AirPlay1 device (iPhone, iTunes ...) to the same outputs, including to a bluetooth speaker. Synchronization works.
-- Add your own buttons (no rotary encoder yet) and map/combine them to various functions (play, pause, volume, next ...
-- Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins headers on PCB 3.x. Currently, only SSD1306-based displays are supported and for LMS only.
+- Add your own buttons, rotary encoder and map/combine them to various functions (play, pause, volume, next ...
+- Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins header. Currently, SSD1306, SSD1326/7 and SH1106 displays are supported.
 
 # Tools, source and BOM
 
@@ -40,7 +42,7 @@ Download tool is [here](https://www.espressif.com/en/support/download/other-tool
 
 ## Connectors & WROVER pin assignments
 
-There are 3 PCB version, with a basic and a boost option for each one (see below for basic/boot differences).
+There are 2 PCB versions, a basic and a boost option for each one (see below for basic/boot differences).
 
 All connectors are through-holes so that you can not populate them and directly solder wires if you want to use the board inside another equipment (Under parenthesis is the WROVER pin number).
 
@@ -48,20 +50,12 @@ All connectors are through-holes so that you can not populate them and directly 
 - J2: audio jack 
 	- 4: (6 - IO34) Detect ==> has pull-up and should be set to ground to detect jack insertion
 - J3: main header 
-	- PCB 1.x and 2.x
-		- 1: GND
-		- 2: EN/reset (3) ==> connect to RTS if possible
-		- 3: 3.3V output
-		- 4: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
-		- 5: RX (34) IO1
-		- 6: TX (35) IO3
-	- PCB 3.x and above
-		- 1: GND
-		- 2: 3.3V output
-		- 3: RX (34) IO1
-		- 4: TX (35) IO3
-		- 5: EN/reset (3) ==> connect to RTS if possible
-		- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
+	- 1: GND
+	- 2: 3.3V output
+	- 3: RX (34) IO1
+	- 4: TX (35) IO3
+	- 5: EN/reset (3) ==> connect to RTS if possible
+	- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
 - J4: battery connector
 	- 1: +
 	- 2: -
@@ -71,23 +65,24 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 3: R-
 	- 4: R+
 - J6: IO extension connector (note that a right-angle and a straight versions exist)
-	- PCB 1.x and 2.x
-		- 1: (26) IO4
-		- 2: (29) IO5
-		- 3: (30) IO18
-		- 4: (31) IO19
-		- 5: (33) IO21
-	- PCB 3.x and above: added pins
-		- 6: (35) IO2/GND depending on S2
-		- 7: (36) IO22
-		- 8: (37) IO23
+	- 1: (26) IO4
+	- 2: (29) IO5
+	- 3: (30) IO18
+	- 4: (31) IO19
+	- 5: (33) IO21
+	- 6: (35) IO2/GND depending on S2
+	- 7: (36) IO22
+	- 8: (37) IO23
 - J7: on/off (on when floating/open)	
 	- 1: GND
 	- 2: ENable ==> short with pin 1/GND to switch off 3.3V power
-- J8: Input/Sensor connector
+- J8: Input/Sensor connector (inputs only, no internal pull-up)
 	- 1: (5) IO39
 	- 2: (4) IO36
-- S2: boot switch on 1.x and 2.x and select J6 pin 6 between GND and IO2 on 3.x
+- J10: Power source
+	- 1: 3.3V
+	- 2: GND
+- S2: select J6 pin 6 between GND and IO2
 - Green LED: (14) IO12, active low
 - Red LED: (16) IO13, active low
 - TAS575x Speaker mute (13) IO14
@@ -98,15 +93,25 @@ All connectors are through-holes so that you can not populate them and directly 
 
 <strong>Note that is no reverse polarity protection on the battery pins, so be careful as it will toast the power switch TPS22810 and probably the PCB itself. There is polarity protection on the main.</strong>
 
-# Flash download & operation
+# Flash download
 
 For at least initial download, you need a serial connection with ideally RX/TX/RTS/DTR and at least RX/TX. There is no build-in converter. 
 
-Connect RX/TX to J3 pin header. If you don't have DTR/boot, set the boot switch underneath (onPCB before 3.x) and if don't have RTS/reset, press the tiny reset button. After PCB 3.x, you must connect DWL to ground while resetting (simply put a wire on pin 6 of J3 and connect it to any ground)
+Connect RX/TX to J3 pin header. If you don't have DTR/boot, you must connect DWL to ground while resetting (simply put a wire on pin 6 of J3 and connect it to any ground) and if don't have RTS/reset, press the tiny reset button or short the RST pin to ground. 
 
 The esp32 will enter download and you'll be able to update the software, as described on the squeezelite-esp32 site. This procedure is rarely needed as the software supports OTA update.
 
-Don't forget to flip again the boot switch if you used it and the reset the board (or have the espressif tool do it for you), then follow the instructions [here](https://github.com/philippe44/squeezelite-esp32) or have fun with your own software
+Follow the instructions [here](https://github.com/philippe44/squeezelite-esp32) or have fun with your own software
+
+# Usage comments
+
+Now that since displays, rotary encoder and buttons are supported by the firmware, you need power and more IOs. You can use power from J6 of course, but if you use it to directly connect a display like [this](https://www.amazon.com/MakerFocus-Display-SSD1306-3-3V-5V-Arduino/dp/B0761LV1SD/) (and remember that since PCB 3.x, it is a direct board-to-board fit) you might want another source so you can use J10. You can as well use extended J6 pin above or below to grab 3.3V from there.
+
+The benefit of changing J6's pin 6 to GND is, for example, to bring a GND wire to a button expansion board of your own. There is no need of Vcc as the ESP32 has optional pull-up. Still, if you want a Vcc, you can use one GPIO as a supply, with a maximum of 40mA per pin. That would allow you to use a single connector for the IOs and a display on J6. You could have Vcc, GND, 3 pins for a rotary, play, back, vol+, vol- which is a pretty good UI.
+
+All 2-pin connectors have been changed to support standard 1.25mm connectors like [this](https://www.ebay.ca/itm/50Set-Micro-JST1-25-2Pin-Connector-Plug-with-Wire-150mm-28AWG/182056647596) so that you can find pre-wired female cables and not go through the pain of using these tiny crimps. The male header is a really tight fit on the PCB, but it works. You can also always solder wires if you want  to.
+
+<strong>All GPIO have internal pull-up/down that you can set by software, so in most cases you don't need to bring power to buttons/encoder board, except if you use J8. These are inputs only and have no pull-up, so you need to add them on your IO board.</strong>
 
 # Populating options
 
@@ -146,24 +151,6 @@ In both case, if you limit the power supply to 16V, you can use 25V for all capa
 
 This PCB option include a boost converter so that power supply can be 12V even in 3 cells modes. With that, the TAS575x is always powered with ~12V which is the ideal ratio heat/amplifier power. The boost converter will up the power supply to comply with LT3652 requirement of Vcc > VBat + 3.3V
 
-The values of R8, R9, R11, D5 and R7 need to be set per values above if you chose 3 cells. If you want to use 2 cells, it's better to change the boost feeback resistors R12 and R18 to produce 12V only, but it's not mandatory. I don't think that using boost and 2 cells makes lots of sense, better just use basic and 12V then.
-
-If you use that PCB and don't populate the boost converter, you can put a shunt directly between D2 and D7 anode and cathode. But then the LT3652 charger is not protected against polarity inversion ... to fix that, as D2 and D7 are separated by enough space, you can use a 0805 diode like [this one](https://www.digikey.ca/product-detail/en/avx-corporation/SD0805S020S1R0/478-7800-1-ND/3749510) ... your choice.
-
-Understand that boost option produces more heat when charging the battery. It's inherent to the cumulated efficiency losses by boosting up Vcc then switching it down to charge battery. You might prefer to use the basic option which produces more heat on the amplifer instead. There is no perfect option.
-
-When disconnecting main power, the battery should kick-in without interruption, but there might be cases when playing at high volume where combination of switch/capacitors will not store enough energy (un-plugging the connector creates many bounces, it's not a clean cut). This does not happen with the basic version because the power OR will always feed the system and main is 3.3V above battery. In the boost version, the power OR is not enough to select the right source as the main voltage is a bit below the battery voltage (and we don't want battery to feed the system when plugged on main), so the undervoltage switch is re-used to disconnect the battery when main is plugged. But the control of that switch might not act as fast desired. You can add a large electrolytic cap anywhere after the battery and main power OR. 
-
-The comment on capacitor voltage ratings apply as the boost is 16V only, so 25V works as it is below Vcc * 1.45
-
-## Versions
-
-Version 2.x uses the TAS578x instead of TAS575x.The PCB change is tiny but critical as TAS578x has a reset pin that must be pulled high (direct Vcc connection, no room for a proper pull-up resistor) otherwise it does not boot. Normally, version 2.x can be used with TAS575x, providing that the TAS578x reset pin which is a GPIO in TAS575x is not driven low.
- 
-Version 3.x expands the J6 5 pins I/O connector to 8 pins and changes S2 slide switch function to select pin 6 of this connector to be either ground or GPIO2. The 6 pins header is reshuffled to allow of an OLED display without wires. 
-
-The benefit of changing J6's pin 6 to GND is, for example, to bring a GND wire to a button expansion board of your own. There is no need of Vcc as the ESP32 has optional pull-up. Still, if you want a Vcc, you can use one GPIO as a supply, with a maximum of 40mA per pin. 
-
 ## (Executive) Summary
 
 - don't want battery, use the basic version and maybe do not populate all the charger-related components
@@ -173,7 +160,7 @@ The benefit of changing J6's pin 6 to GND is, for example, to bring a GND wire t
 	- don't need too much audio power when battery powered: choose basic (2 cells) and power it with 12V. 
 	- want more audio power: 
 		- don't care much about amplifier's heat: choose basic (3 cells) and power it with 16+V (put a sink on the TAS575X and the exposed pad). 
-		- want to minimize amplifier's heat, choose boost (3 cells) and power it with 12V
+	- want to minimize amplifier's heat, choose boost (3 cells) and power it with 12V
 	- want simply to power with less than 12V, choose boost (2 or 3 cells). 
 
 # Limitation & Disclaimer
