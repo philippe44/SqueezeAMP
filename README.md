@@ -29,8 +29,8 @@ With the squeezelite-esp32 software, you can
 - Stream from LMS and send audio to the build-in amplifier, the line-out jack, the spdif connector or another bluetooth speaker. You can also use an external I2S DAC if you connect it to the general purpose 5/8 pins connector and tweak the software. Synchronization works.
 - Stream from a Bluetooth device and send audio to the same outputs, except of course for sending to another bluetooth speaker ... There is no guarantee of audio/video synchronization at this point
 - Stream from an AirPlay1 device (iPhone, iTunes ...) to the same outputs, including to a bluetooth speaker. Synchronization works.
-- Add your own buttons (no rotary encoder yet) and map/combine them to various functions (play, pause, volume, next ...
-- Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins headers on PCB 3.x. Currently, only SSD1306-based displays are supported and for LMS only.
+- Add your own buttons, rotary encoder and map/combine them to various functions (play, pause, volume, next ...
+- Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins header. Currently, SSD1306, SSD1326/7 and SH1106 displays are supported.
 
 # Tools, source and BOM
 
@@ -42,7 +42,7 @@ Download tool is [here](https://www.espressif.com/en/support/download/other-tool
 
 ## Connectors & WROVER pin assignments
 
-There are 3 PCB version, with a basic and a boost option for each one (see below for basic/boot differences).
+There are 2 PCB versions, a basic and a boost option for each one (see below for basic/boot differences).
 
 All connectors are through-holes so that you can not populate them and directly solder wires if you want to use the board inside another equipment (Under parenthesis is the WROVER pin number).
 
@@ -80,8 +80,8 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 1: (5) IO39
 	- 2: (4) IO36
 - J10: Power source
-	- 1: GND
-	- 2: 3.3V
+	- 1: 3.3V
+	- 2: GND
 - S2: select J6 pin 6 between GND and IO2
 - Green LED: (14) IO12, active low
 - Red LED: (16) IO13, active low
