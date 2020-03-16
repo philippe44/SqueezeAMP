@@ -171,9 +171,9 @@ Similarly, the charger is for Li-Ion and such cells have inherent safety issues.
 
 <strong>This is by no mean a professional design so use it at your own risk. I will not be liable for any issue caused by that board</strong>. I'm making it public in case somebody with enough knowledge will find it useful, so know youwhat 're doing first. Similarly, this is not an audophile design, so please do not complain or ask me for some linear power or 32 bits / DSD insanities. The SqueezeESP software can do 16 bits @ 192 kHz which is way more than enough, in fact 48kHz/16 should be sufficient. 
 
-![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/top.png?raw=true)
-![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/bottom.png?raw=true)
-![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/top-boost.png?raw=true)
+![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/to.png?raw=true)
+![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/botto.png?raw=true)
+![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/top-boos.png?raw=true)
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/IMG_5330.png?raw=true)
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/master/IMG_5331.png?raw=true)
 
