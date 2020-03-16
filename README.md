@@ -12,9 +12,10 @@ It includes the following:
 - Direct speaker output
 - Jack 3.5mm for analogue line-out (with insertion detection) ==> <strong>this NOT supposed to be a headset output but it seems to drive enough for small 3 pins headphones at decent volume (need to check)</strong>
 - SDPIF optical output
-- Connector for 5/8 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, buttons, rotary encoder ...
+- Connector for 8 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, buttons, rotary encoder ...
 - 2 pins (1.27mm) on/off header (off mode consumes about 0.3mA on battery, a few tweaks can bring it down to 0.1 mA)
 - 2 pins (1.27mm) GPI/sensor header (see ESP32 documentation about sensor_vn and sensor_vp)
+- 2 pins (1.27mm) for 3.3V/GND
 - 6 pins (2.54mm) header provide 3.3V (output), GND, reset and serial flash download (boot, rx, tx - which can be reused at general purpose IO)
 - 2.5mm Power Jack with Vcc 5...16V (20V under certain conditions see note on power supply below)
 - A/D for Vcc measure
