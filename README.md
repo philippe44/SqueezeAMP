@@ -169,7 +169,7 @@ This contains a power amplifier and a charger on a small board, so it gets prett
 
 Similarly, the charger is for Li-Ion and such cells have inherent safety issues. It's using a LT3652, which is a good charger that takes care of battery maintenance, but there is no thermal management, so be careful and ALWAYS use protected Li-Ion cells. There is battery undervoltage detection on board so that the systems shuts off when battery voltage is too low. There is no under voltage detection for main supply.
 
-<strong>This is by no mean a professional design so use it at your own risk. I will not be liable for any issue caused by that board</strong>. I'm making it public in case somebody with enough knowledge will find it useful, so know youwhat 're doing first. Similarly, this is not an audophile design, so please do not complain or ask me for some linear power or 32 bits / DSD insanities. The SqueezeESP software can do 16 bits @ 192 kHz which is way more than enough, in fact 48kHz/16 should be sufficient. 
+<strong>This is by no mean a professional design so use it at your own risk. I will not be liable for any issue caused by that board</strong>. I'm making it public in case somebody with enough knowledge will find it useful, so know what you're doing first. Similarly, this is not an audiophile design, so please do not complain or ask me for some linear power or 32 bits / DSD insanities. The SqueezeESP software can do 16 bits @ 192 kHz which is way more than enough, in fact 48kHz/16 should be sufficient. 
 
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/3.x/top.png?raw=true)
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/3.x/bottom.png?raw=true)
