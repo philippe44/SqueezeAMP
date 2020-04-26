@@ -65,7 +65,7 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 2: L-
 	- 3: R-
 	- 4: R+
-- J6: IO extension connector (note that a right-angle and a straight versions exist)
+- J6: IO extension connector (note that a right-angle and a straight version exist)
 	- 1: (26) IO4
 	- 2: (29) IO5
 	- 3: (30) IO18
