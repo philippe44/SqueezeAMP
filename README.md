@@ -18,7 +18,7 @@ It includes the following:
 - 2 pins (1.27mm) for 3.3V/GND
 - 6 pins (2.54mm) header provide 3.3V (output), GND, reset and serial flash download (boot, rx, tx - which can be reused as general purpose IO)
 - 2.5mm Power Jack with Vcc 5...16V (20V under certain conditions see note on power supply below)
-- A/D for Vcc measure
+- A/D for battery level measure
 - Charge LED, bi-color LED
 
 Looking at the board, TOP refers to the side that has the WROVER module and LEFT is where the Power Jack is located
