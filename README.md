@@ -16,9 +16,9 @@ It includes the following:
 - 2 pins (1.27mm) on/off header (off mode consumes about 0.3mA on battery, a few tweaks can bring it down to 0.1 mA)
 - 2 pins (1.27mm) GPI/sensor header (see ESP32 documentation about sensor_vn and sensor_vp)
 - 2 pins (1.27mm) for 3.3V/GND
-- 6 pins (2.54mm) header provide 3.3V (output), GND, reset and serial flash download (boot, rx, tx - which can be reused at general purpose IO)
+- 6 pins (2.54mm) header provide 3.3V (output), GND, reset and serial flash download (boot, rx, tx - which can be reused as general purpose IO)
 - 2.5mm Power Jack with Vcc 5...16V (20V under certain conditions see note on power supply below)
-- A/D for Vcc measure
+- A/D for battery level measure
 - Charge LED, bi-color LED
 
 Looking at the board, TOP refers to the side that has the WROVER module and LEFT is where the Power Jack is located
@@ -65,7 +65,7 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 2: L-
 	- 3: R-
 	- 4: R+
-- J6: IO extension connector (note that a right-angle and a straight versions exist)
+- J6: IO extension connector (note that a right-angle and a straight version exist)
 	- 1: (26) IO4
 	- 2: (29) IO5
 	- 3: (30) IO18
