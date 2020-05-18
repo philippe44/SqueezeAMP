@@ -58,7 +58,7 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 4: TX (35) IO3
 	- 5: EN/reset (3) ==> connect to RTS if possible
 	- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
-- J4: battery connector
+- J4/J9: battery connector (double footprint)
 	- 1: +
 	- 2: -
 - J5: speaker connector
