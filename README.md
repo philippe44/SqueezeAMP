@@ -31,6 +31,7 @@ With the squeezelite-esp32 software, you can
 - Stream from a Bluetooth device and send audio to the same outputs, except of course for sending to another bluetooth speaker ... There is no guarantee of audio/video synchronization at this point
 - Stream from an AirPlay1 device (iPhone, iTunes ...) to the same outputs, including to a bluetooth speaker. Synchronization works.
 - Add your own buttons, rotary encoder and map/combine them to various functions (play, pause, volume, next ...
+- Use IR control by adding a simple receiver compatible with 38kHz device (no pullup resistor or capacitor needed)
 - Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins header. Currently, SSD1306, SSD1326/7 and SH1106 displays are supported.
 
 # Tools, source and BOM
