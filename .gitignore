@@ -19,5 +19,5 @@ data/
 models/
 fw/
 PCBWay
-gerber/
+gerber/previous
 SSD*
