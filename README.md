@@ -115,6 +115,8 @@ All 2-pin connectors have been changed to support standard 1.25mm connectors lik
 
 <strong>All GPIO have internal pull-up/down that you can set by software, so in most cases you don't need to bring power to buttons/encoder board, except if you use J8. These are inputs only and have no pull-up, so you need to add them on your IO board.</strong>
 
+According to TAS57xx datasheet, if you short L+/L- and R+/R- you can use the chip in post-filtered mono BTL mode. Sounds a bit strange and I've not tried as of this writing, but if it might be handy to do a mono (more powerful) speaker.
+
 # Populating options
 
 System is modular and you can pretty much build each sub-part independently. 
