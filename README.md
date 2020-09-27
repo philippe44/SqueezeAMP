@@ -32,7 +32,7 @@ With the squeezelite-esp32 software, you can
 - Stream from an AirPlay1 device (iPhone, iTunes ...) to the same outputs, including to a bluetooth speaker. Synchronization works.
 - Add your own buttons, rotary encoder and map/combine them to various functions (play, pause, volume, next ...
 - Use IR control by adding a simple receiver compatible with 38kHz device (no pullup resistor or capacitor needed)
-- Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins header. Currently, SSD1306, SSD1326/7 and SH1106 displays are supported.
+- Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins header. Currently SH1106, SSD1306, SSD1322, SSD1326/7, SSD1351, ST7735 and ST7789 displays are supported.
 
 # Tools, source and BOM
 
@@ -54,8 +54,8 @@ All connectors are through-holes so that you can not populate them and directly 
 - J3: main header 
 	- 1: GND
 	- 2: 3.3V output
-	- 3: RX (34) IO1
-	- 4: TX (35) IO3
+	- 3: TX (35) IO1
+	- 4: RX (34) IO3
 	- 5: EN/reset (3) ==> connect to RTS if possible
 	- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
 - J4/J9: battery connector (double footprint)
