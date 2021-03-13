@@ -12,6 +12,7 @@
 *_mod
 *.gif
 *.asc
+*.ods
 backup/
 tools/
 previous/
