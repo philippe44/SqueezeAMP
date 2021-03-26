@@ -103,7 +103,7 @@ Connect RX/TX to J3 pin header. If you don't have DTR/boot, you must connect DWL
 
 The esp32 will enter download and you'll be able to update the software, as described on the squeezelite-esp32 site. This procedure is rarely needed as the software supports OTA update.
 
-Follow the instructions [here](https://github.com/philippe44/squeezelite-esp32) or have fun with your own software
+Follow the instructions [here](https://github.com/philippe44/squeezelite-esp32) or have fun with your own software (see also espressif [guide](https://github.com/espressif/esptool/wiki/ESP32-Boot-Mode-Selection))
 
 # Usage comments
 
