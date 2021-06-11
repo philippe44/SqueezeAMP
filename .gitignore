@@ -13,6 +13,7 @@
 *.gif
 *.asc
 *.ods
+*.doc?
 backup/
 tools/
 previous/
@@ -23,4 +24,5 @@ PCBWay
 Classic/
 gerber/previous
 SSD*
+pictures/
 
