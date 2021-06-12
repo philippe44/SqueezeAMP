@@ -34,7 +34,9 @@ With the squeezelite-esp32 software, you can
 - Use IR control by adding a simple receiver compatible with 38kHz device (no pullup resistor or capacitor needed)
 - Add a display like this [one](https://www.buydisplay.com/i2c-blue-0-91-inch-oled-display-module-128x32-arduino-raspberry-pi) which can be directly connected to the 6-pins header. Currently SH1106, SSD1306, SSD1322, SSD1326/7, SSD1351, ST7735 and ST7789 displays are supported.
 
-A small 0.91 display like [this](https://www.aliexpress.com/item/1005001680040131.html) one with [low profile connector](https://www.aliexpress.com/item/4000147221999.html) can be directly connected to the 6 pins 2.54 mm connector and nicely fits inside the case.
+A small 0.91 display like [this one](https://www.aliexpress.com/item/1005001680040131.html) with [low profile connector](https://www.aliexpress.com/item/4000147221999.html) can be directly connected to the 6 pins 2.54 mm connector and nicely fits inside the case. Use the following settings 
+- display_config -> I2C,driver=SSD1306,width=128,height=32
+- i2c_config -> sda=3,scl=1,port=1,speed=600000
 
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/3.x/Boost%20with%20OLED%20-%20angled.png?raw=true)
 
