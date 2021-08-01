@@ -78,7 +78,7 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 3: (30) IO18
 	- 4: (31) IO19
 	- 5: (33) IO21
-	- 6: (35) IO2/GND depending on S2
+	- 6: (35) IO0/GND depending on S2
 	- 7: (36) IO22
 	- 8: (37) IO23
 - J7: on/off (on when floating/open)	
