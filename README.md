@@ -159,7 +159,7 @@ In both case, if you limit the power supply to 16V, you can use 25V for all capa
 
 ## Boost design
 
-This PCB option include a boost converter so that power supply can be 12V even in 3 cells modes. With that, the TAS575x is always powered with ~12V which is the ideal ratio heat/amplifier power. The boost converter will up the power supply to comply with LT3652 requirement of Vcc > VBat + 3.3V
+This PCB option include a boost converter so that power supply can be 12V even in 3 cells modes. With that, the TAS575x is always powered with ~12V which is the ideal ratio heat/amplifier power. The boost converter will up the power supply to comply with LT3652 requirement of Vcc > VBat + 3.3V. You could even power it with 5V and it will charge the 3-cells battery **but** it will still power the amplifier at 5V (or whatever you put in).
 
 ## (Executive) Summary
 
