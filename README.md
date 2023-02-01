@@ -40,6 +40,8 @@ A small 0.91 display like [this one](https://www.aliexpress.com/item/10050016800
 
 ![alt text](https://github.com/philippe44/SqueezeAMP/blob/3.x/Boost%20with%20OLED%20-%20angled.png?raw=true)
 
+This casing is in the *case* repository and has been made by Chris Hill who deserves all credits for this really great design
+
 # Tools, source and BOM
 
 I'm using [diptrace](https://diptrace.com) for schematics and routing which is free up to 300 pins. I had to do a few custom components and patterns, let me know if they are missing or if you cannot use the free version, I'll try to do some export to other PCB formats if needed
