@@ -12,6 +12,7 @@ It includes the following:
 - Direct speaker output
 - Jack 3.5mm for analogue line-out (with insertion detection) ==> <strong>this NOT supposed to be a headset output but it seems to drive enough for small 3 pins headphones at decent volume (need to check)</strong>
 - SDPIF optical output
+- Infrared Receiver
 - Connector for 8 extra general purpose I/O (SPI, I2C, I2S, GPIO ...) ==> can add screen, buttons, rotary encoder ...
 - 2 pins (1.27mm) on/off header (off mode consumes about 0.3mA on battery, a few tweaks can bring it down to 0.1 mA)
 - 2 pins (1.27mm) GPI/sensor header (see ESP32 documentation about sensor_vn and sensor_vp)
@@ -65,7 +66,7 @@ All connectors are through-holes so that you can not populate them and directly 
 	- 3: TX (35) IO1
 	- 4: RX (34) IO3
 	- 5: EN/reset (3) ==> connect to RTS if possible
-	- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible)
+	- 6: Boot (25) IO0 ==> pull down at reset to enter download mode (connect to DTR if possible). It's also connected to the IR
 - J4/J9: battery connector (double footprint)
 	- 1: +
 	- 2: -
