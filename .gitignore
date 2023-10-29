@@ -2,8 +2,6 @@
 !case/*.pdf
 *.zip
 *.wrl
-*.stp
-*.step
 *.jpg
 *.html
 *.lib
@@ -27,4 +25,8 @@ gerber/previous
 SSD*
 pictures/
 !B*Schematics*.pdf
-
+*.123dx
+*.step
+*.stp
+!case/*.step
+!case/*.stp
